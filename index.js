@@ -58,7 +58,7 @@ var data = [
     "Travel is fatal to prejudice, bigotry, and narrow-mindedness.",
     "Courage is resistance to fear, mastery of fear - not absence of fear. ",
     "The report of my death was an exaggeration.",
-    "It's not the size of the dog in the fight, it's the size of the fight in the dog."
+    "It's not the size of the dog in the fight, it's the size of the fight in the dog.",
     "Be careful about reading health books. You may die of a misprint.",
     "It is better to keep your mouth closed and let people think you are a fool than to open it and remove all doubt.",
     "Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.",
