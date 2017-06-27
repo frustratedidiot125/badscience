@@ -44,20 +44,43 @@ var STOP_MESSAGE = "Goodbye!";
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/data
 //=========================================================================================================================================
 var data = [
-    "Jeremiah was a turtle, not a bullfrog.", // He was a good friend to many, but not me.",
-    "There are 97 known varieties of grapefruit. They all taste the same.",
-    "The second happiest animal on earth is the zebra. The first is the lion.",
-    "Widget was considered an offensive word until 1858. Doodad was similarly outlawed by several local US statutes until 1911.",
-    "There is no spoon. There are only sporks.",
-    "3 out of every 5 superstitions tested are backed as true by scientific evidence. In the case of the remaining 2, the scientists in question stepped on cracks, suffered broken vertebrae, and were unable to complete their research. ",
-    "93 percent of all statistics are made up on the spot. The other 7 percent are not statistically significant.",
-    "Goldfish can live up to 300 years if cared for properly. Their memories, however, only last about 7 seconds.",
-    "The Sun is an almost perfect rectangle. Diffraction in Earth's atmosphere makes it look spherical.",
-    "The U.S. military once spent 2.2 billion dollars designing a submarine for giraffes.",
-    "Giraffes are excellent underwater swimmers.",
-    "The temperature at the very center of the Sun can precipitously drop to reach negative 15 degrees Celsius.",
-    "There are tribes in ancient russia that regularly rode wild boars into battle. ",
-    "Attack rabbits are real. Beware."
+    "Whenever you find yourself on the side of the majority, it is time to pause and reflect.", // He was a good friend to many, but not me.",
+    "If you tell the truth, you don't have to remember anything.",
+    "Don't go around saying the world owes you a living. The world owes you nothing. It was here first.",
+    "I have never let my schooling interfere with my education.",
+    "Get your facts first, and then you can distort them as much as you please.",
+    "Reader, suppose you were an idiot. And suppose you were a member of Congress. But I repeat myself.",
+    "Always do right. This will gratify some people and astonish the rest.",
+    "The man who does not read good books has no advantage over the man who cannot read them.",
+    "Clothes make the man. Naked people have little or no influence on society.",
+    "Truth is stranger than fiction, but it is because Fiction is obliged to stick to possibilities; Truth isn't.",
+    "Kindness is the language which the deaf can hear and the blind can see.",
+    "Travel is fatal to prejudice, bigotry, and narrow-mindedness.",
+    "Courage is resistance to fear, mastery of fear - not absence of fear. ",
+    "The report of my death was an exaggeration.",
+    "It's not the size of the dog in the fight, it's the size of the fight in the dog."
+    "Be careful about reading health books. You may die of a misprint.",
+    "It is better to keep your mouth closed and let people think you are a fool than to open it and remove all doubt.",
+    "Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.",
+    "Age is an issue of mind over matter. If you don't mind, it doesn't matter.",
+    "There are three kinds of lies: lies, damned lies, and statistics.",
+    "You can't depend on your eyes when your imagination is out of focus.",
+    "The secret of getting ahead is getting started.",
+    "Life would be infinitely happier if we could only be born at the age of eighty and gradually approach eighteen.",
+    "The average American may not know who his grandfather was. But the American was, however, one degree better off than the average Frenchman who, as a rule, was in considerable doubt as to who his father was.",
+    "There has been only one Christian. They caught him and crucified him. Early.",
+    "Total abstinence is so excellent a thing that it cannot be carried to too great an extent. In my passion for it I even carry it so far as to totally abstain from total abstinence itself.",
+    "Concerning the difference between man and the jackass: some observers hold that there isn’t any. But this wrongs the jackass.",
+    "Heaven goes by favor. If it went by merit, you would stay out and your dog would go in.",
+    "I am quite sure now that often, very often, in matters concerning religion and politics a man’s reasoning powers are not above the monkey’s.",
+    "I would rather have my ignorance than another man’s knowledge, because I have so much more of it.",
+    "In the first place God made idiots. This was for practice. Then He made school boards.",
+    "Let us endeavor so to live that when we come to die even the undertaker will be sorry.",
+    "Patriot: the person who can holler the loudest without knowing what he is hollering about.",
+    "It is by the goodness of God that in our country we have those three unspeakably precious things: freedom of speech, freedom of conscience, and the prudence never to practice either.",
+    "To be good is noble; but to show others how to be good is nobler and no trouble."
+   
+
 ];
 
 var randomFact = function () {
@@ -92,7 +115,7 @@ alexaApp.launch(function(request, response) {
     response.say(GET_FACT_MESSAGE + randomFact()+HELP_MESSAGE).reprompt(HELP_REPROMPT).shouldEndSession(false);
 });
 
-alexaApp.intent("GetNewFactIntent", {
+alexaApp.intent("GetNewQuoteIntent", {
   "slots": {},
                   "utterances": [
       "a fact", "tell me a fact", "tell me a fun fact", "give me a fact", "give me a fake fact", "tell me trivia", "tell me some fake trivia", "give me trivia", "give me fake trivia", "tell me something", "give me something", "tell me a fake fun fact", 
