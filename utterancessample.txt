@@ -1,0 +1,36 @@
+GetNewQuoteIntent a quote
+GetNewQuoteIntent tell me a quote
+GetNewQuoteIntent tell me another quote
+GetNewQuoteIntent give me a quote
+GetNewQuoteIntent give me another quote
+GetNewQuoteIntent tell me a mark twain quote
+GetNewQuoteIntent what would mark twain say
+GetNewQuoteIntent drop some knowledge
+GetNewQuoteIntent tell me some trivia
+GetNewQuoteIntent tell me something new
+GetNewQuoteIntent enlighten me
+GetNewQuoteIntent enlighten us
+GetNewQuoteIntent give me another
+GetNewQuoteIntent give me another quote
+GetNewQuoteIntent can i have another
+GetNewQuoteIntent give us another
+GetNewQuoteIntent tell me another
+GetNewQuoteIntent tell us another
+
+
+{
+  "intents": [
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "GetNewFactIntent"
+    }
+  ]
+}
