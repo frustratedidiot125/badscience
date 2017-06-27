@@ -30,7 +30,7 @@ GetNewQuoteIntent tell us another
       "intent": "AMAZON.StopIntent"
     },
     {
-      "intent": "GetNewFactIntent"
+      "intent": "GetNewQuoteIntent"
     }
   ]
 }
