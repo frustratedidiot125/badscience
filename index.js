@@ -118,7 +118,7 @@ alexaApp.launch(function(request, response) {
 alexaApp.intent("GetNewQuoteIntent", {
   "slots": {},
                   "utterances": [
-      "a quote", "tell me a quote", "tell me another quote", "give me a quote", "give me another quote", "tell me a mark twain quote", "what would mark twain say", "drop some knowledge","tell me some trivia", "tell me something new","enlighten me", "enlighten us","give me another", "give me another quote", "can i have another","give us another","tell me another"
+      "a quote", "tell me a quote", "tell me another quote", "give me a quote", "give me another quote", "tell me a mark twain quote", "what would mark twain say", "drop some knowledge", "tell me some trivia", "tell me something new", "enlighten me", "enlighten us", "give me another", "give me another quote", "can i have another", "give us another", "tell me another", "tell us another"
     ]
   },
                 function (request, response){
