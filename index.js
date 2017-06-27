@@ -34,10 +34,10 @@ app.set("view engine", "ejs");
 //Make sure to enclose your value in quotes, like this: var APP_ID = "amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1";
 var APP_ID = undefined;
 
-var SKILL_NAME = "Fake fun facts";
-var GET_FACT_MESSAGE = "Little known fact.  ";
-var HELP_MESSAGE = "  You can say give me another fact, or, say stop to exit. which would you like?";
-var HELP_REPROMPT = "You can say, give me another fact, or stop to exit.";
+var SKILL_NAME = "";
+var GET_FACT_MESSAGE = "Mark Twain once said.  ";
+var HELP_MESSAGE = "  You can say give me another quote, or, say stop to exit.";
+var HELP_REPROMPT = "You can say, give me another quote, or stop to exit.";
 var STOP_MESSAGE = "Goodbye!";
 
 //=========================================================================================================================================
