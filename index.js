@@ -74,9 +74,26 @@ var data = [
   "He hits from both sides of the plate. He’s amphibious.",
   "It was impossible to get a conversation going, everybody was talking too much.",
   "I can see how he won twenty-five games. What I don’t understand is how he lost five.",
-  
-  
-    "
+  "I’m a lucky guy and I’m happy to be with the Yankees. And I want to thank everyone for making this night necessary.",
+  "I don’t know if the streakers were men or women. They had bags over their heads."
+  "I’m not going to buy my kids an encyclopedia. Let them walk to school like I did.",
+  "In baseball, you don’t know nothing.",
+  "I never blame myself when I’m not hitting. I just blame the bat and if it keeps up, I change bats. After all, if I know it isn’t my fault that I’m not hitting, how can I get mad at myself?",
+  "I never said most of the things I said.",
+  "It ain’t the heat, it’s the humility."
+  "If you ask me anything I don’t know, I’m not going to answer.",
+  "I wish everybody had the drive he, Joe DiMaggio, had. He never did anything wrong on the field. I’d never seen him dive for a ball, everything was a chest-high catch, and he never walked off the field.",1
+  "So I’m ugly. I never saw anyone hit with his face.",
+  "Take it with a grin of salt.",
+  "On the 1973 Mets. We were overwhelming underdogs.",
+  "The towels were so thick there I could hardly close my suitcase.",
+  "Little League baseball is a very good thing because it keeps the parents off the streets.",
+  "Mickey Mantle was a very good golfer, but we weren’t allowed to play golf during the season; only at spring training.",
+  "You don’t have to swing hard to hit a home run. If you got the timing, it’ll go.",
+  "I’m lucky. Usually you’re dead to get your own museum, but I’m still alive to see mine.",
+  "If I didn’t make it in baseball, I won’t have made it workin’. I didn’t like to work.",
+  "If the world were perfect, it wouldn’t be.",
+  "A lot of guys go, Hey, Yoeg, say a Yogi-ism.  I tell ’em, I don’t know any. They want me to make one up. I don’t make ’em up. I don’t even know when I say it. They’re the truth. And it is the truth. I don’t know."
 ];
 
 var randomFact = function () {
