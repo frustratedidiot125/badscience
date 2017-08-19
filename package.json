@@ -1,5 +1,5 @@
 {
-  "name": "mktwnq",
+  "name": "bearclaw",
   "version": "0.0.3",
   "description": "A heavily heavily frustratingly modified Alexa Skill project using the alexa-app module with Express.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frustratedidiot123/mktwnq.git"
+    "url": "git+https://github.com/frustratedidiot125/bearclaw.git"
   },
   "keywords": [
     "alexa",
@@ -17,10 +17,10 @@
     "echo",
     "skills"
   ],
-  "author": "BH/D/Frustr123",
+  "author": "BH/D/Frustr125",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ffrusyratedidiot123/issues"
+    "url": "https://github.com/ffrusyratedidiot125/issues"
   },
   "dependencies": {
     "alexa-app": "^4.0.0",
