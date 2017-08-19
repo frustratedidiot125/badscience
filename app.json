@@ -1,7 +1,7 @@
 {
-  "name": "mark twain quotes",
-  "description": "A facts skill for Heroku.",
-  "repository": "https://github.com/frustratedidiot123/mktwnqt",
+  "name": "yogi berra quotes",
+  "description": "A skill for Heroku.",
+  "repository": "https://github.com/frustratedidiot125/bearclaw",
   "logo": "https://avatars0.githubusercontent.com/u/25057028",
   "keywords": ["alexa", "amazon", "echo", "skills"],
   "buildpacks": [
