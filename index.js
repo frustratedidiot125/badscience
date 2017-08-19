@@ -75,7 +75,7 @@ var data = [
   "It was impossible to get a conversation going, everybody was talking too much.",
   "I can see how he won twenty-five games. What I don’t understand is how he lost five.",
   "I’m a lucky guy and I’m happy to be with the Yankees. And I want to thank everyone for making this night necessary.",
-  "I don’t know if the streakers were men or women. They had bags over their heads."
+  "I don’t know if the streakers were men or women. They had bags over their heads.",
   "I’m not going to buy my kids an encyclopedia. Let them walk to school like I did.",
   "In baseball, you don’t know nothing.",
   "I never blame myself when I’m not hitting. I just blame the bat and if it keeps up, I change bats. After all, if I know it isn’t my fault that I’m not hitting, how can I get mad at myself?",
