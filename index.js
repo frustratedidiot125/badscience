@@ -80,9 +80,9 @@ var data = [
   "In baseball, you don’t know nothing.",
   "I never blame myself when I’m not hitting. I just blame the bat and if it keeps up, I change bats. After all, if I know it isn’t my fault that I’m not hitting, how can I get mad at myself?",
   "I never said most of the things I said.",
-  "It ain’t the heat, it’s the humility."
+  "It ain’t the heat, it’s the humility.",
   "If you ask me anything I don’t know, I’m not going to answer.",
-  "I wish everybody had the drive he, Joe DiMaggio, had. He never did anything wrong on the field. I’d never seen him dive for a ball, everything was a chest-high catch, and he never walked off the field.",1
+  "I wish everybody had the drive he, Joe DiMaggio, had. He never did anything wrong on the field. I’d never seen him dive for a ball, everything was a chest-high catch, and he never walked off the field.",
   "So I’m ugly. I never saw anyone hit with his face.",
   "Take it with a grin of salt.",
   "On the 1973 Mets. We were overwhelming underdogs.",
