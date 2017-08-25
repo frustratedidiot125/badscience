@@ -34,10 +34,10 @@ app.set("view engine", "ejs");
 //Make sure to enclose your value in quotes, like this: var APP_ID = "amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1";
 var APP_ID = undefined;
 
-var SKILL_NAME = "";
-var GET_FACT_MESSAGE = " ";
-var HELP_MESSAGE = "  You can say give me a joke, or, say stop at any time to exit.";
+
+var HELP_MESSAGE = "If you'd like to hear any old science joke,  You can say give me a joke. To hear a physics joke, say, tell me a physics joke. The same goes for chemistry and astrophysics.  If I stop being funny, or you'd like me to leave, feel free to say stop to exit at any time.";
 var HELP_REPROMPT = "You can say, give me a joke, or stop to exit.";
+var rprompt = "you can say, give me another for the same type of joke, 
 var STOP_MESSAGE = "Goodbye!";
 
 //=========================================================================================================================================
@@ -118,15 +118,14 @@ var astro = [
    
 ]
 
-var rastro = function (){
+// var rastro = function (){
   
-var randomFact = function () {
-  var factArr = data;
-  var factIndex = Math.floor(Math.random() * factArr.length);
-  var nextFact = factArr[factIndex];
-  return nextFact;
-  };
+// var randomFact = function () {
+  
+ // return nextFact;
+ // };
 
+  var data = chem.concat(phys, bio, astro);
 
 //=========================================================================================================================================
 //Editing anything below this line might break your skill.--  NVM just broke it.
@@ -146,20 +145,37 @@ var randomFact = function () {
 
 
 alexaApp.launch(function(request, response) {
-//var factArrA = data;
-// var factIndexA = Math.floor(Math.random() * factArrA.length);
-// var randomFactA = factArrA[factIndexA];
-    response.say(GET_FACT_MESSAGE + randomFact()).reprompt(HELP_REPROMPT).shouldEndSession(true);
+
+    response.say(HELP_MESSAGE).reprompt(HELP_REPROMPT).shouldEndSession(false);
 });
 
-alexaApp.intent("GetNewQuoteIntent", {
-  "slots": {},
+alexaApp.intent("NewSciJoke", {
+  "slots": {"Typeofjoke": "Fieldofstudy" },
                   "utterances": [
       "a quote", "tell me a quote", "tell me another quote", "give me a quote", "give me another quote", "tell me a mark twain quote", "what would mark twain say", "drop some knowledge", "tell me some trivia", "tell me something new", "enlighten me", "enlighten us", "give me another", "give me another quote", "can i have another", "give us another", "tell me another", "tell us another"
     ]
   },
+                //indont know any _slota- jokes, so i'm just going to tell you a random one
                 function (request, response){
-  response.say(GET_FACT_MESSAGE + randomFact()).reprompt(HELP_REPROMPT).shouldEndSession(true)});
+ 
+  var field = req.slot("Typeofjoke");
+  var prevfield = +req.session('type');
+  if (field != "physics" && field != "biology" && field != "astrophysics" && field && field != "??"){ //im sorry, i dont know any jokes in $field. why don't you try again?  
+  if (!field || field == "??"){
+    if (prevfield){ //spin previous field as commanded by 'another' ...or assign prevfield to field? no..if field == "another" AND prevfield has one ofnthe three, then run that type? else random?? but random a certain way?
+    
+    
+  if (field == "chemistry"){
+  } else if (field == "physics"){
+  } else if (field == "biology"){
+  } else if (field == "astrophysics"){
+    else if (!field 
+  
+  var factArr = data;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  response.say(randomFact.reprompt(HELP_REPROMPT).shouldEndSession(false)});
+  res.session('type', 'random');
 
     
    // 'GetNewFactIntent': function () {
