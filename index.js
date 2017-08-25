@@ -44,7 +44,7 @@ var STOP_MESSAGE = "Goodbye!";
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/data
 //=========================================================================================================================================
 var data = [
-    "When you come to a fork in the road, take it.", // 
+    "I would make a chemistry pun but it’d be easily miscible.", // 
   "You can observe a lot by just watching.",
   "It ain’t over till it’s over.",
   "It’s like déjà vu all over again.",
