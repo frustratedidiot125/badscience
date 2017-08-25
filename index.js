@@ -35,9 +35,11 @@ app.set("view engine", "ejs");
 var APP_ID = undefined;
 
 
-var HELP_MESSAGE = "If you'd like to hear any old science joke,  You can say give me a joke. To hear a physics joke, say, tell me a physics joke. The same goes for chemistry and astrophysics.  If I stop being funny, or you'd like me to leave, feel free to say stop to exit at any time.";
+var MESSAGE = "If you'd like to hear any old science joke,  You can say give me a joke. To hear a physics joke, say, tell me a physics joke. The same goes for chemistry and astrophysics. If I stop being funny, or you'd like me to leave, feel free to say stop to exit at any time.";
 var HELP_REPROMPT = "You can say, give me a joke, or stop to exit.";
-var rprompt = "you can say, give me another for the same type of joke, 
+var rprompt = "you can say, give me a joke for another joke, or stop to exit.";
+var fprompt = "You can say, give me another to hear a joke from the same scientific discipline, give me a joke to pull from a wider field, or stop to exit.";
+var HELP = "you can say, give me another for another joke in the same discipline, or give me a joke for a random joke, or specify a specific scientific discipline that I should choose from, or say stop to exit. ";
 var STOP_MESSAGE = "Goodbye!";
 
 //=========================================================================================================================================
