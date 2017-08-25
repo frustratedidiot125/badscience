@@ -100,7 +100,11 @@ var phys = [
    "The way to a man's stomach is through his esophagus.",
   "The Fastest way to determine the sex of a chromosome is to pull down its genes.",
   "A British biologist walks into a pub in London, and asks for a pint of adenosine triphosphate. The barman replies, That'll be 80p.",
-  "the difference between a dog and a marine biologist? One wags a tail and the other tags a whale. "
+ "The microbiologist who visited 30 different countries and spoke 6 languages? He was a man of many cultures.",
+   "the English major defined microtome on his biology exam as An itsy bitsy book.",
+   
+   
+   "the difference between a dog and a marine biologist? One wags a tail and the other tags a whale. "
    
    ];
    
