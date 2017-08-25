@@ -43,39 +43,39 @@ var STOP_MESSAGE = "Goodbye!";
 //=========================================================================================================================================
 //TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/data
 //=========================================================================================================================================
-var data = [
+var chem = [
     "I would make a chemistry pun but it’d be easily miscible.", // 
   "The optimist sees the glass half full. The pessimist sees the glass half empty. The chemist sees the glass completely full, half with liquid and half with air.",
   "If you're not part of the solution, you're part of the precipitate.",
-  "A photon checks into a hotel and is asked if he needs any help with his luggage. He says, No, I'm traveling light.",
+
   "Organic chemistry is difficult. Those who study it have alkynes of trouble.",
-  "Did you hear about the man who got cooled to absolute zero? He's 0K now.",
-  "When asked if she knew any jokes about sodium? The chenist replied, nah.",
+
+  "When asked if she knew any jokes about sodium? The chemist replied, nah.",
   "Two chemists go into a bar. The first one says, I think I'll have an H2O. The second one says, I think I'll have an H2O too. The second one died shortly thereafter.",
-  "A couple of biologists had twins. They named one Jessica and the other Control.",
+  
   "Never trust atoms. They make up everything!",
   "Carbon is a girl's best friend.",
   "I had to make these bad chemistry jokes because all the good ones Argon.",
-  "Biology is the only science in which multiplication is the same thing as division.",
+
   "The name's Bond. Ionic Bond. Taken, not shared.",
   "Chemists are great problem solvers. They have all the solutions.",
-  "A fellow accidentally ingested some alpha-L-glucose and discovered that he had no ill effect. Apparently he was ambidextrose.",
-  "you’re so hot you denature my proteins.",
-  "It is reported that Copernicus's parents said the following to him at the age of twelve. Copernicus, young man, when are you going to come to terms with the fact that the world does not revolve around you?" 
-  "black holes are what you get in black socks.",
-  "An astrophysicist who lived in New York City once said, Whatever the missing mass of the universe is, I hope it's not in cockroaches.",
-  "My professor says that black holes are interesting, but I think they suck.",
-  "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, crap, it's just a satellite.",
-  "The way to a man's stomach is through his esophagus.",
-  "The Fastest way to determine the sex of a chromosome is to pull down its genes.",
-  "A British biologist walks into a pub in London, and asks for a pint of adenosine triphosphate. The barman replies, That'll be 80p.",
-  "the difference between a dog and a marine biologist? One wags a tail and the other tags a whale. ",
+
+
+
+  
   "Outside his buckyball home, one molecule overheard another molecule saying, I'm positive that a free electron once stripped me of an electron after he lepton me. You gotta keep your ion them.",
   "Classified ad. Do you have mole problems? If so, call Avogadro at 602-1023.",
   "Definition hydrophobic. Fear of utility bills.",
   "A cation is defined as a positively charged kitten.",
-  "a benzene ring with iron atoms replacing the carbon atoms is a ferrous wheel.",
-  "Bodies in motion remain in motion, and bodies at rest stay in bed unless their mothers call them to get up.",
+  "a benzene ring with iron atoms replacing the carbon atoms is a ferrous wheel."
+
+  
+];
+var phys = [
+  "A photon checks into a hotel and is asked if he needs any help with his luggage. He says, No, I'm traveling light.",
+   "Did you hear about the man who got cooled to absolute zero? He's 0K now.",
+  "A fellow accidentally ingested some alpha-L-glucose and discovered that he had no ill effect. Apparently he was ambidextrose.",
+  "Absolute zero is so cool!",
   "A neutron walked into a bar and asked, How much for a gin and tonic? The bartender replied, for you, no charge.",
   "Two atoms were walking across a road when one of them said, I think I lost an electron!  Are you sure? The other replied. Yes, I'm absolutely positive!",
   "Murphy's Law for string theorists. anything in string theory that theoretically can go wrong will go wrong, but if nothing does go theoretically wrong, then experimentally it is ruled out.",
@@ -89,16 +89,32 @@ var data = [
   "Seen on a warning label. According to quantum theory, this product may collapse into another state if directly observed. ",
   "Nothing in the known universe travels faster than a bad check. ",
   "The speed of an IRS tax refund is constant. ",
-  "Anger is neither created nor conserved but only changed from one form to another. ",
-  "Absolute zero is so cool!"
-
-
- 
+  "Anger is neither created nor conserved but only changed from one form to another. "
+  "Bodies in motion remain in motion, and bodies at rest stay in bed unless their mothers call them to get up."
   
-  
-  
-];
+  ]
+ var bio = [
+  " A couple of biologists had twins. They named one Jessica and the other Control.",
+    "Biology is the only science in which multiplication is the same thing as division.",
+    "you’re so hot you denature my proteins.",
+   "The way to a man's stomach is through his esophagus.",
+  "The Fastest way to determine the sex of a chromosome is to pull down its genes.",
+  "A British biologist walks into a pub in London, and asks for a pint of adenosine triphosphate. The barman replies, That'll be 80p.",
+  "the difference between a dog and a marine biologist? One wags a tail and the other tags a whale. "
+   
+   ];
+   
+var astro = [
+     "It is reported that Copernicus's parents said the following to him at the age of twelve. Copernicus, young man, when are you going to come to terms with the fact that the world does not revolve around you?" 
+  "black holes are what you get in black socks.",
+  "An astrophysicist who lived in New York City once said, Whatever the missing mass of the universe is, I hope it's not in cockroaches.",
+  "My professor says that black holes are interesting, but I think they suck.",
+  "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, crap, it's just a satellite."
+   
+]
 
+var randastro
+  
 var randomFact = function () {
   var factArr = data;
   var factIndex = Math.floor(Math.random() * factArr.length);
