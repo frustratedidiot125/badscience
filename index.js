@@ -117,7 +117,7 @@ var astro = [
    
 ]
 
-var randastro
+var rastro = function (){
   
 var randomFact = function () {
   var factArr = data;
