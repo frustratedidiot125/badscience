@@ -78,7 +78,7 @@ var phys = [
   "Absolute zero is so cool!",
   "A neutron walked into a bar and asked, How much for a gin and tonic? The bartender replied, for you, no charge.",
   "Two atoms were walking across a road when one of them said, I think I lost an electron!  Are you sure? The other replied. Yes, I'm absolutely positive!",
-  "Murphy's Law for string theorists. anything in string theory that theoretically can go wrong will go wrong, but if nothing does go theoretically wrong, then experimentally it is ruled out.",
+  
   "entropy isn't what it used to be.",
   "Bad photons go to prisms.",
   "Heisenberg went for a drive and got stopped by a traffic cop. The cop asked, do you know how fast you were going? Heisenberg replied, No, but I know where I am.",
@@ -113,6 +113,7 @@ var astro = [
   "black holes are what you get in black socks.",
   "An astrophysicist who lived in New York City once said, Whatever the missing mass of the universe is, I hope it's not in cockroaches.",
   "My professor says that black holes are interesting, but I think they suck.",
+  "Murphy's Law for string theorists. anything in string theory that theoretically can go wrong will go wrong, but if nothing does go theoretically wrong, then experimentally it is ruled out.",
   "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, crap, it's just a satellite."
    
 ]
