@@ -35,9 +35,9 @@ app.set("view engine", "ejs");
 var APP_ID = undefined;
 
 var SKILL_NAME = "";
-var GET_FACT_MESSAGE = "Yogi Berra once said.  ";
-var HELP_MESSAGE = "  You can say give a quote, or, say stop at any time to exit.";
-var HELP_REPROMPT = "You can say, give me a quote, or stop to exit.";
+var GET_FACT_MESSAGE = " ";
+var HELP_MESSAGE = "  You can say give me a joke, or, say stop at any time to exit.";
+var HELP_REPROMPT = "You can say, give me a joke, or stop to exit.";
 var STOP_MESSAGE = "Goodbye!";
 
 //=========================================================================================================================================
@@ -45,55 +45,58 @@ var STOP_MESSAGE = "Goodbye!";
 //=========================================================================================================================================
 var data = [
     "I would make a chemistry pun but it’d be easily miscible.", // 
-  "You can observe a lot by just watching.",
-  "It ain’t over till it’s over.",
-  "It’s like déjà vu all over again.",
-  "No one goes there nowadays, it’s too crowded.",
-  "Baseball is 90% mental and the other half is physical.",
-  "Always go to other people’s funerals, otherwise they won’t come to yours.",
-  "A nickel ain’t worth a dime anymore.",
-  "We made too many wrong mistakes.",
-  "Congratulations. I knew the record would stand until it was broken.",
-  "You better cut the pizza in four pieces because I’m not hungry enough to eat six.",
-  "You wouldn’t have won if we’d beaten you.",
-  "I usually take a two-hour nap from one to four.",
-  "Never answer an anonymous letter.",
-  "Slump? I ain’t in no slump. I just ain’t hitting.",
-  "How can you think and hit at the same time?",
-  "The future ain’t what it used to be.",
-  "I tell the kids, somebody’s gotta win, somebody’s gotta lose. Just don’t fight about it. Just try to get better.",
-  "It gets late early out here.",
-  "If the people don’t want to come out to the ballpark, nobody’s going to stop them.",
-  "We have deep depth.",
-  "Pair up in threes.",
-  "Why buy good luggage, you only use it when you travel.",
-  "You’ve got to be very careful if you don’t know where you are going, because you might not get there.",
-  "All pitchers are liars or crybabies.",
-  "Even Napoleon had his Watergate.",
-  "Bill Dickey is learning me his experience.",
-  "He hits from both sides of the plate. He’s amphibious.",
-  "It was impossible to get a conversation going, everybody was talking too much.",
-  "I can see how he won twenty-five games. What I don’t understand is how he lost five.",
-  "I’m a lucky guy and I’m happy to be with the Yankees. And I want to thank everyone for making this night necessary.",
-  "I don’t know if the streakers were men or women. They had bags over their heads.",
-  "I’m not going to buy my kids an encyclopedia. Let them walk to school like I did.",
-  "In baseball, you don’t know nothing.",
-  "I never blame myself when I’m not hitting. I just blame the bat and if it keeps up, I change bats. After all, if I know it isn’t my fault that I’m not hitting, how can I get mad at myself?",
-  "I never said most of the things I said.",
-  "It ain’t the heat, it’s the humility.",
-  "If you ask me anything I don’t know, I’m not going to answer.",
-  "I wish everybody had the drive he, Joe DiMaggio, had. He never did anything wrong on the field. I’d never seen him dive for a ball, everything was a chest-high catch, and he never walked off the field.",
-  "So I’m ugly. I never saw anyone hit with his face.",
-  "Take it with a grin of salt.",
-  "On the 1973 Mets. We were overwhelming underdogs.",
-  "The towels were so thick there I could hardly close my suitcase.",
-  "Little League baseball is a very good thing because it keeps the parents off the streets.",
-  "Mickey Mantle was a very good golfer, but we weren’t allowed to play golf during the season; only at spring training.",
-  "You don’t have to swing hard to hit a home run. If you got the timing, it’ll go.",
-  "I’m lucky. Usually you’re dead to get your own museum, but I’m still alive to see mine.",
-  "If I didn’t make it in baseball, I won’t have made it workin’. I didn’t like to work.",
-  "If the world were perfect, it wouldn’t be.",
-  "A lot of guys go, Hey, Yoeg, say a Yogi-ism.  I tell ’em, I don’t know any. They want me to make one up. I don’t make ’em up. I don’t even know when I say it. They’re the truth. And it is the truth. I don’t know."
+  "The optimist sees the glass half full. The pessimist sees the glass half empty. The chemist sees the glass completely full, half with liquid and half with air.",
+  "If you're not part of the solution, you're part of the precipitate.",
+  "A photon checks into a hotel and is asked if he needs any help with his luggage. He says, No, I'm traveling light.",
+  "Organic chemistry is difficult. Those who study it have alkynes of trouble.",
+  "Did you hear about the man who got cooled to absolute zero? He's 0K now.",
+  "When asked if she knew any jokes about sodium? The chenist replied, nah.",
+  "Two chemists go into a bar. The first one says, I think I'll have an H2O. The second one says, I think I'll have an H2O too. The second one died shortly thereafter.",
+  "A couple of biologists had twins. They named one Jessica and the other Control.",
+  "Never trust atoms. They make up everything!",
+  "Carbon is a girl's best friend.",
+  "I had to make these bad chemistry jokes because all the good ones Argon.",
+  "Biology is the only science in which multiplication is the same thing as division.",
+  "The name's Bond. Ionic Bond. Taken, not shared.",
+  "Chemists are great problem solvers. They have all the solutions.",
+  "A fellow accidentally ingested some alpha-L-glucose and discovered that he had no ill effect. Apparently he was ambidextrose.",
+  "you’re so hot you denature my proteins.",
+  "It is reported that Copernicus's parents said the following to him at the age of twelve. Copernicus, young man, when are you going to come to terms with the fact that the world does not revolve around you?" 
+  "black holes are what you get in black socks.",
+  "An astrophysicist who lived in New York City once said, Whatever the missing mass of the universe is, I hope it's not in cockroaches.",
+  "My professor says that black holes are interesting, but I think they suck.",
+  "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, crap, it's just a satellite.",
+  "The way to a man's stomach is through his esophagus.",
+  "The Fastest way to determine the sex of a chromosome is to pull down its genes.",
+  "A British biologist walks into a pub in London, and asks for a pint of adenosine triphosphate. The barman replies, That'll be 80p.",
+  "the difference between a dog and a marine biologist? One wags a tail and the other tags a whale. ",
+  "Outside his buckyball home, one molecule overheard another molecule saying, I'm positive that a free electron once stripped me of an electron after he lepton me. You gotta keep your ion them.",
+  "Classified ad. Do you have mole problems? If so, call Avogadro at 602-1023.",
+  "Definition hydrophobic. Fear of utility bills.",
+  "A cation is defined as a positively charged kitten.",
+  "a benzene ring with iron atoms replacing the carbon atoms is a ferrous wheel.",
+  "Bodies in motion remain in motion, and bodies at rest stay in bed unless their mothers call them to get up.",
+  "A neutron walked into a bar and asked, How much for a gin and tonic? The bartender replied, for you, no charge.",
+  "Two atoms were walking across a road when one of them said, I think I lost an electron!  Are you sure? The other replied. Yes, I'm absolutely positive!",
+  "Murphy's Law for string theorists. anything in string theory that theoretically can go wrong will go wrong, but if nothing does go theoretically wrong, then experimentally it is ruled out.",
+  "entropy isn't what it used to be.",
+  "Bad photons go to prisms.",
+  "Heisenberg went for a drive and got stopped by a traffic cop. The cop asked, do you know how fast you were going? Heisenberg replied, No, but I know where I am.",
+  "One night, a year after almost failing her high school physics class, a girl told her older brother, You know, my physics teacher was right about the optical Doppler effect. You see those cars? The lights of the ones approaching us are white, but the lights of the ones moving away from us are red.",
+  "elementary particles are the dreams that stuff is made of.",
+  "Seen on a product warning label. warning. Due to its heavy mass, this product warps the space surrounding it. No health hazards are yet known to be associated with effect. ",
+  "Seen on a warning label. This product may actually be nine-dimensional but, if this is the case, functionality is not affected by the extra six dimensions. ",
+  "Seen on a warning label. According to quantum theory, this product may collapse into another state if directly observed. ",
+  "Nothing in the known universe travels faster than a bad check. ",
+  "The speed of an IRS tax refund is constant. ",
+  "Anger is neither created nor conserved but only changed from one form to another. ",
+  "Absolute zero is so cool!"
+
+
+ 
+  
+  
+  
 ];
 
 var randomFact = function () {
