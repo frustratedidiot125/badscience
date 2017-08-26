@@ -116,7 +116,7 @@ var astro = [
   "An astrophysicist who lived in New York City once said, Whatever the missing mass of the universe is, I hope it's not in cockroaches.",
   "My professor says that black holes are interesting, but I think they suck.",
   "Murphy's Law for string theorists. anything in string theory that theoretically can go wrong will go wrong, but if nothing does go theoretically wrong, then experimentally it is ruled out.",
-  "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, crap, it's just a satellite."
+  "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, shoot, it's just a satellite."
    
 ];
 
