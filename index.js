@@ -111,7 +111,7 @@ var phys = [
    ];
    
 var astro = [
-     "It is reported that Copernicus's parents said the following to him at the age of twelve. Copernicus, young man, when are you going to come to terms with the fact that the world does not revolve around you?" 
+     "It is reported that Copernicus's parents said the following to him at the age of twelve. Copernicus, young man, when are you going to come to terms with the fact that the world does not revolve around you?",
   "black holes are what you get in black socks.",
   "An astrophysicist who lived in New York City once said, Whatever the missing mass of the universe is, I hope it's not in cockroaches.",
   "My professor says that black holes are interesting, but I think they suck.",
