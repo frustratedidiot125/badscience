@@ -27,7 +27,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 //=========================================================================================================================================
-//TODO: The items below this comment need your attention.
+//TODO: global vars below this comment need your attention.
 //=========================================================================================================================================
 
 
@@ -38,12 +38,12 @@ var APP_ID = undefined;
 var MESSAGE = "Hi there! I exist to tell science jokes.  you can say give me a joke. or specify a specific scientific discipline, like give me a physics joke, I'm currently well-versed in chemistry, physics, biology, and astrophysics. If I stop being funny, or you'd like me to leave, feel free to say stop to exit at any time.";
 var HELP_REPROMPT = "You can say, give me a joke, or stop to exit.";
 var aprompt = "you can say, give me a joke, specify a scientific discipline, or say stop to exit.";
-//var fprompt = "You can say, give me a joke for another joke, , or stop to exit.";
+var hprompt = "You can say, give me a joke for another science joke, specify a specific field, like give me a physics joke, or say stop to exit.";
 //var HELP = "you can say, give me anothet for another joke in the same discipline, or give me a joke for a random joke, or specify a specific scientific discipline that I should choose from, or say stop to exit. ";
 var STOP_MESSAGE = "Goodbye!";
 
-//=========================================================================================================================================
-//TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-node-js-fact/data
+//=======================================================================================================================================
+//Replace array data 
 //=========================================================================================================================================
 var chem = [
     "I would make a chemistry pun but it’d be easily miscible.", // 
@@ -130,9 +130,9 @@ var astro = [
   var data = chem.concat(phys, bio, astro);
 
 //=========================================================================================================================================
-//Editing anything below this line might break your skill.--  NVM just broke it.
+// Where are the intent and launchy Things Are -expect a broken
 //=========================================================================================================================================
-// exports.handler = function(event, context, callback) {
+// exports.handler = function(event, context, callback) { // old style. We don't use this anymore.
  //   var alexa = Alexa.handler(event, context);
   //  alexa.APP_ID = APP_ID;
    // alexa.registerHandlers(handlers);
@@ -140,7 +140,7 @@ var astro = [
 // };
 // var handlers = {
    // 'LaunchRequest': function () {
-     //   this.emit('GetNewFactIntent');
+     //   this.emit('newscijokeIntent');
   //  },
 
 
@@ -148,7 +148,7 @@ var astro = [
 
 alexaApp.launch(function(request, response) {
 
-    response.say(HELP_MESSAGE).reprompt(HELP_REPROMPT).shouldEndSession(false);
+    response.say(MESSAGE).reprompt(HELP_REPROMPT).shouldEndSession(false);
 });
 
 alexaApp.intent("NewSciJoke", {
@@ -187,25 +187,31 @@ alexaApp.intent("NewSciJoke", {
   var factIndex = Math.floor(Math.random() * factArr.length);
   var randomFact = factArr[factIndex];
   res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
- }else if (field != "physics" && field != "biology" && field != "astrophysics" && field && field != "??"){ //im sorry, i dont know any jokes in $field. why don't you try again?  
+ console.log("elseif astro field=" + field);
+  } else if (field != "physics" && field != "biology" && field != "astrophysics" && field && field != "??"){ //im sorry, i dont know any jokes in $field. why don't you try again?  
     res.say("I'm sorry, but I don't know any jokes in that field, or I didn't recognize the way you said it. Why don't you try again? Say, give me a joke or specify a different discipline, like give me a physics joke. or say stop to exit.").shouldEndSession(false);
-    }
-  }else if (!field 
-  
-  var factArr = data;
+    console.log("badornorecogfield elseif field=" + field);
+    } else if (field == "??"){
+      var factArr = data;
   var factIndex = Math.floor(Math.random() * factArr.length);
   var randomFact = factArr[factIndex];
-  response.say(randomFact.reprompt(HELP_REPROMPT).shouldEndSession(false)});
-  res.session('type', 'random');
+  res.say("I'm sorry, I didn't quite catch that. But here's a science joke ànyway." + randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
+      console.log("?? elseif field=" + field);
+  } else if (!field){
+    var factArr = data;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
+    console.log("blank elseif field=" + field);
+  } else {
+    var factArr = data;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
+    console.log("error else field=" + field);
+    }
+});
 
-    
-   // 'GetNewFactIntent': function () {
-     //   var factArr = data;
-      //  var factIndex = Math.floor(Math.random() * factArr.length);
-     //   var randomFact = factArr[factIndex];
-    //    var speechOutput = GET_FACT_MESSAGE + randomFact;
-     //   this.emit(':tellWithCard', speechOutput, SKILL_NAME, randomFact)
-//    },
 
 alexaApp.intent("AMAZON.HelpIntent", {
   "slots": {} },
@@ -214,23 +220,12 @@ alexaApp.intent("AMAZON.HelpIntent", {
   //              ]
 //  },
   function(request, response) {
-    response.say(HELP_MESSAGE).reprompt(HELP_REPROMPT).shouldEndSession(false);
+    response.say(hprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
   }
  );
 
 
- //   'AMAZON.HelpIntent': function () {
- //       var speechOutput = HELP_MESSAGE;
-  //      var reprompt = HELP_REPROMPT;
-  //      this.emit(':ask', speechOutput, reprompt);
-  //  },
-  //  'AMAZON.CancelIntent': function () {
-    //    this.emit(':tell', STOP_MESSAGE);
- //   },
-  //  'AMAZON.StopIntent': function () {
-   //     this.emit(':tell', STOP_MESSAGE);
- //   }
-// };
+ 
 
 
 alexaApp.intent("AMAZON.StopIntent", {
