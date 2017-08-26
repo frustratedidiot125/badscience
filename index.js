@@ -91,7 +91,7 @@ var phys = [
   "Seen on a warning label. According to quantum theory, this product may collapse into another state if directly observed. ",
   "Nothing in the known universe travels faster than a bad check. ",
   "The speed of an IRS tax refund is constant. ",
-  "Anger is neither created nor conserved but only changed from one form to another. "
+  "Anger is neither created nor conserved but only changed from one form to another. ",
   "Bodies in motion remain in motion, and bodies at rest stay in bed unless their mothers call them to get up."
   
   ]
