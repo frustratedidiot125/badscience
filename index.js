@@ -35,11 +35,11 @@ app.set("view engine", "ejs");
 var APP_ID = undefined;
 
 
-var MESSAGE = "If you'd like to hear any old science joke,  You can say give me a joke. To hear a physics joke, say, tell me a physics joke. The same goes for chemistry and astrophysics. If I stop being funny, or you'd like me to leave, feel free to say stop to exit at any time.";
+var MESSAGE = "Hi there! I exist to tell science jokes.  you can say give me a joke. or specify a specific scientific discipline, like give me a physics joke, I'm currently well-versed in chemistry, physics, biology, and astrophysics. If I stop being funny, or you'd like me to leave, feel free to say stop to exit at any time.";
 var HELP_REPROMPT = "You can say, give me a joke, or stop to exit.";
-var rprompt = "you can say, give me a joke for another joke, or stop to exit.";
-var fprompt = "You can say, give me another to hear a joke from the same scientific discipline, give me a joke to pull from a wider field, or stop to exit.";
-var HELP = "you can say, give me another for another joke in the same discipline, or give me a joke for a random joke, or specify a specific scientific discipline that I should choose from, or say stop to exit. ";
+var aprompt = "you can say, give me a joke, specify a scientific discipline, or say stop to exit.";
+//var fprompt = "You can say, give me a joke for another joke, , or stop to exit.";
+//var HELP = "you can say, give me anothet for another joke in the same discipline, or give me a joke for a random joke, or specify a specific scientific discipline that I should choose from, or say stop to exit. ";
 var STOP_MESSAGE = "Goodbye!";
 
 //=========================================================================================================================================
@@ -161,17 +161,36 @@ alexaApp.intent("NewSciJoke", {
                 function (request, response){
  
   var field = req.slot("Typeofjoke");
-  var prevfield = +req.session('type');
-  if (field != "physics" && field != "biology" && field != "astrophysics" && field && field != "??"){ //im sorry, i dont know any jokes in $field. why don't you try again?  
-  if (!field || field == "??"){
-    if (prevfield){ //spin previous field as commanded by 'another' ...or assign prevfield to field? no..if field == "another" AND prevfield has one ofnthe three, then run that type? else random?? but random a certain way?
+//var prevfield = +req.session('type');
+  
+ // else if ( == "??"){
+//    if (prevfield){ //spin previous field as commanded by 'another' ...or assign prevfield to field? no..if field == "another" AND prevfield has one ofnthe three, then run that type? else random?? but random a certain way?
     
     
   if (field == "chemistry"){
+      var factArr = chem;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
   } else if (field == "physics"){
+    var factArr = phys;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
   } else if (field == "biology"){
+    var factArr = bio;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
   } else if (field == "astrophysics"){
-    else if (!field 
+  var factArr = astro;
+  var factIndex = Math.floor(Math.random() * factArr.length);
+  var randomFact = factArr[factIndex];
+  res.say(randomFact + " " + aprompt).reprompt(HELP_REPROMPT).shouldEndSession(false);
+ }else if (field != "physics" && field != "biology" && field != "astrophysics" && field && field != "??"){ //im sorry, i dont know any jokes in $field. why don't you try again?  
+    res.say("I'm sorry, but I don't know any jokes in that field, or I didn't recognize the way you said it. Why don't you try again? Say, give me a joke or specify a different discipline, like give me a physics joke. or say stop to exit.").shouldEndSession(false);
+    }
+  }else if (!field 
   
   var factArr = data;
   var factIndex = Math.floor(Math.random() * factArr.length);
