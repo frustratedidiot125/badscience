@@ -94,7 +94,7 @@ var phys = [
   "Anger is neither created nor conserved but only changed from one form to another. ",
   "Bodies in motion remain in motion, and bodies at rest stay in bed unless their mothers call them to get up."
   
-  ]
+  ];
  var bio = [
   " A couple of biologists had twins. They named one Jessica and the other Control.",
     "Biology is the only science in which multiplication is the same thing as division.",
@@ -118,7 +118,7 @@ var astro = [
   "Murphy's Law for string theorists. anything in string theory that theoretically can go wrong will go wrong, but if nothing does go theoretically wrong, then experimentally it is ruled out.",
   "Star light, star bright, first star I see tonight. I wish I may, I wish I might. Oh, crap, it's just a satellite."
    
-]
+];
 
 // var rastro = function (){
   
