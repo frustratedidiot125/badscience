@@ -158,7 +158,7 @@ alexaApp.intent("NewSciJoke", {
     ]
   },
                 //indont know any _slota- jokes, so i'm just going to tell you a random one
-                function (request, response){
+                function (req, res){
  
   var field = req.slot("Typeofjoke");
 //var prevfield = +req.session('type');
